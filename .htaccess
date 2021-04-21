@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# ЗАПРЕЩЁННЫЕ ФАЙЛЫ
+RewriteRule .htaccess - [F]
+
+# ПРАВИЛА mod_rewrite
+RewriteRule ^index.html$ index.php [L]
+
+#%{QUERY_STRING}
+RewriteRule ^login(/?)+$ index.php?option=login [L,QSA]
+RewriteRule ^register(/?)+$ index.php?option=register [L,QSA]
+RewriteRule ^profile(/?)+$ index.php?option=profile [L,QSA]
+RewriteRule ^logout(/?)+$ index.php?option=logout [L,QSA]
+RewriteRule ^catalog(/?)+$ index.php?option=catalog [L,QSA]
+RewriteRule ^cart(/?)+$ index.php?option=cart [L,QSA]
+RewriteRule ^favorites(/?)+$ index.php?option=favorites [L,QSA]

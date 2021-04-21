@@ -1,0 +1,99 @@
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	color: #222;
+}
+
+/*Шапка сайта*/
+.navbar-brand img {
+	width: 150px;
+}
+
+.navbar-nav li {
+	padding-right: 20px;
+}
+
+.navbar-nav li a {
+	font-size: 24px;
+	color: #FFD014 !important;
+}
+
+.navbar-nav li svg {
+	color: #FFD014 !important;
+	vertical-align: baseline !important;
+}
+
+.nav-link {
+	font-size: 1.1em !important;
+}
+
+.nav-item {
+	display: flex;
+}
+
+/*Выравнивание текста по центру*/
+.text-align-center {
+	text-align: center;
+}
+
+/*Карусель*/
+.control-buttons {
+	text-decoration: none;
+	text-shadow: 1px 1px 1px black;
+}
+
+.carousel-inner {
+	height: 500px;
+}
+
+.darkened {
+	position: relative;
+}
+
+/*Темный фон для главной карусели*/
+.darkened::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);  
+	z-index: 1;
+}
+
+.carousel-inner img {
+	transform: translateY(-15%);
+	width: 100%;
+	height: 100%;
+}
+
+/*Описание элемента карусели*/
+.carousel-caption {
+	font-family: tt milks;
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-80%);
+	text-shadow: 1px 1px 1px black;
+}
+
+.carousel-indicators {
+	z-index: 3;
+}
+
+/*Корзина*/
+.tt-milks-ff {
+	font-family: tt milks;
+	font-size: 24px;
+}
+
+.card {
+	border-radius: 15px;
+}
+
+.cart-card-right-border {
+	border-radius: 0 15px 15px 0;
+}
